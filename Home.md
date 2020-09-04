@@ -1,6 +1,6 @@
 # Welcome to the spirit-software wiki!
 
-### Setup Steps
+### Setup repo steps
 
 1. Install Ubuntu 18.04 (dual boot or VM) ([help](https://linuxhint.com/install_ubuntu_18-04_virtualbox/))
 2. Install ROS Melodic ([help](http://wiki.ros.org/melodic/Installation/Ubuntu))
@@ -17,3 +17,18 @@ cd ~/catkin_ws
 catkin_make
 catkin_make run_tests
 ```
+
+### Setup new branch
+```bash
+cd ~/catkin_ws/src/spirit-software
+git checkout -b descriptive-branch-name
+git push --set-upstream origin descriptive-branch-name
+```
+
+### Create documentation
+```bash
+cd ~/catkin_ws/src/spirit-software
+doxygen Doxyfile
+firefox docs/index.html
+```
+
