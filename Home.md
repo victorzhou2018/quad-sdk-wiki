@@ -10,7 +10,7 @@
 cd ~/catkin_ws/src
 git clone https://github.com/robomechanics/spirit-software.git
 source devel/setup.bash
-./setup.sh
+chmod +x setup.sh && ./setup.sh
 catkin_make
 catkin_make run_tests
 ```
