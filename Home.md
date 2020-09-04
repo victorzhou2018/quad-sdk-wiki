@@ -1,6 +1,6 @@
 # Welcome to the spirit-software wiki!
 
-### Setup repo steps
+### Setup repo
 
 1. Install Ubuntu 18.04 (dual boot or VM) ([help](https://linuxhint.com/install_ubuntu_18-04_virtualbox/))
 2. Install ROS Melodic ([help](http://wiki.ros.org/melodic/Installation/Ubuntu))
