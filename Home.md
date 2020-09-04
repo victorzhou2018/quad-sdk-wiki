@@ -7,11 +7,13 @@
 3. Create catkin workspace ([help](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment))
 4. Setup repo
 ```bash
-cd ~/catkin_ws/src
-git clone https://github.com/robomechanics/spirit-software.git
 cd ~/catkin_ws
 source devel/setup.bash
+cd src
+git clone https://github.com/robomechanics/spirit-software.git
+cd spirit-software
 chmod +x setup.sh && ./setup.sh
+cd ~/catkin_ws
 catkin_make
 catkin_make run_tests
 ```
