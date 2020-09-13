@@ -28,7 +28,7 @@ git push --set-upstream origin descriptive-branch-name
 ### Create new package
 ```bash
 cd ~/catkin_ws/src/spirit-software
-catkin_create_pkg spirit-package-name roscpp std_msgs *other-rosdeps-here*
+catkin_create_pkg spirit_package_name roscpp std_msgs *other-rosdeps-here*
 ```
 After creating a package, open package.xml and modify the package owner and contact info to be yourself
 
