@@ -38,4 +38,5 @@ cd ~/catkin_ws/src/spirit-software
 doxygen Doxyfile
 firefox docs/index.html
 ```
-
+### Create new custom messages
+Custom messages can be placed in spirit_msgs/msg. See the [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv) for details on message creation. Add your message filename to the `add_message_files()` in spirit_msgs/CMakeLists.txt, and add spirit_msgs as a dependency to your package. To implement and namespace your messages, refer to [this tutorial](http://wiki.ros.org/ROS/Tutorials/DefiningCustomMessages). 
