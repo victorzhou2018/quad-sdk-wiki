@@ -15,6 +15,7 @@ cd spirit-software
 chmod +x setup.sh && ./setup.sh
 cd ~/catkin_ws
 catkin_make
+roscore
 catkin_make run_tests
 ```
 
