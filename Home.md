@@ -15,7 +15,9 @@ cd spirit-software
 chmod +x setup.sh && ./setup.sh
 cd ~/catkin_ws
 catkin_make
-roscore
+```
+In a separate terminal, run `roscore`, then return to the original terminal and run
+```
 catkin_make run_tests
 ```
 
