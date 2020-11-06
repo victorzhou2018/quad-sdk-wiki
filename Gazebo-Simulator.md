@@ -1,14 +1,12 @@
 # Gazebo Simulator
 
-**Run Gazebo Simulator (No visualization)**
+**Run Gazebo Simulator**
 
 `roslaunch spirit_utils spirit_gazebo.launch`
 
-**Run Gazebo Simulator (Gazebo GUI visualization)**
-
-`roslaunch spirit_gazebo.launch gui:=true`
-
-**Run Gazebo Simulator (Run spirit software)**
-
-`roslaunch spirit_gazebo.launch run_software:=true`
-
+Optional arguments:
+| Arg Name      | Default Value | Description |
+| ------------- | ------------- | ----------- |
+| run_software  | false         | calls spirit.launch to run standard spirit software |
+| gui           | false         | Loads gazebo gui |
+| paused        | true          | Start gazebo in paused state |
