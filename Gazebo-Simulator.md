@@ -2,7 +2,7 @@
 
 **Run Gazebo Simulator**
 
-`roslaunch spirit_utils spirit_gazebo.launch`
+`roslaunch spirit_utils spirit_gazebo.launch arg:=value`
 
 Optional arguments:
 | Arg Name      | Default Value | Description |
