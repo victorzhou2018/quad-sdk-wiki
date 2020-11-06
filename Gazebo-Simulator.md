@@ -1,8 +1,10 @@
 
-# Run Gazebo Simulator
+# Run Gazebo Simulator (No visualization)
+roslaunch spirit_utils spirit_gazebo.launch
 
-With visualization:
-roslaunch gazebo_scripts spirit_gazebo.launch
+# Run Gazebo Simulator (Gazebo GUI visualization)
+roslaunch spirit_gazebo.launch gui:=true
 
-Without visualization:
-roslaunch gazebo_scripts spirit_gazebo.launch gui:=false
+# Run Gazebo Simulator (Run spirit software)
+roslaunch spirit_gazebo.launch run_software:=true
+
