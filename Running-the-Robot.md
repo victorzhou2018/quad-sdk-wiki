@@ -17,3 +17,5 @@ export ROS_IP=192.168.168.5
 - Run `roslaunch spirit_utils spirit.launch` to execute the planning stack, visualize the robot, and start recording (not implemented yet)
 - Run (TBD) to process the data logs and store them in (TBD)
 - (Optional) Upload the contents of (TBD) to Box
+
+Spirit Logger Package allows you to visualize the logged data from the robot (In .bag format) and save figures through a GUI. You need to first build the spirit software stack, which also installs the appropriate dependencies. Once finished run the following command to launch the  logger GUI. 
