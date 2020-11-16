@@ -19,4 +19,8 @@ export ROS_IP=192.168.168.5
 - (Optional) Upload the contents of (TBD) to Box
 
 ### Running data logger
-Spirit Logger Package allows you to visualize the logged data from the robot (In .bag format) and save figures through a GUI. You need to first build the spirit software stack, which also installs the appropriate dependencies. Once finished run the following command to launch the  logger GUI. 
+Spirit Logger Package allows you to visualize the logged data from the robot (In .bag format) and save figures through a GUI. You need to first build the spirit software stack, which also installs the appropriate dependencies. Once finished, navigate to src/spirit-software where the spirit_logger package lives. Run the following command to launch the logger GUI:
+```
+rosrun spirit_logger read_bag.py "address of the target bag file".bag
+```
+You should see the GUI similar to the following picture. 
