@@ -9,7 +9,7 @@
 
 ### Running tests and collecting data
 - After initializing the robot, open a new terminal and source the spirit workspace
-- Run the following, replacing the address for `ROS_IP` with your computer's IP on the Spirit network if different (or add this to the .bashrc):
+- Run the following, replacing the address for `ROS_IP` with your computer's IP on the Spirit network if different:
 ```
 export ROS_MASTER_URI=http://192.168.168.105:11311
 export ROS_IP=192.168.168.5
