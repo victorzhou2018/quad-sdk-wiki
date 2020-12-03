@@ -44,6 +44,6 @@ matlab -nodesktop
 processLog('<trial_name_year-month-day>')
 exit
 ```
-Note that this will by default show the animation, which must run in full in order to save properly.
+Note that this will by default show the animation, which must run in full in order to save properly. Alternatively you can launch the standard MATLAB GUI and edit `processLog.m` as needed to generate the proper media.
 
-Alternatively you can launch the standard MATLAB GUI and edit `processLog.m` as needed to generate the proper media.
+Once you have run `processLog()`, upload the newly created folder (located in `spirit_logger/logs`) to Box.
