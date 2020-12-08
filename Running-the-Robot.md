@@ -12,7 +12,7 @@ roslaunch spirit_utils robot_driver.launch
 - Optional arguments to `robot_driver.launch` are
   - `with_proxy:=true` launches a node to replicate the robot hardware, use if you are not near the robot (default false)
   - `with_mocap:=true` includes `mocap.launch`, which launches the optitrack interface node (default false)
-  - `record:=true` includes `record.launch` which starts recording all topics into a bag (default false)
+  - `logging:=true` includes `logging.launch` which starts recording all topics into a bag (default false)
 - (Optional) If you need internet connectivity, plug in an ethernet cable
 
 ### Running tests
