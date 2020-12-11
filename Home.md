@@ -18,6 +18,9 @@ catkin_make
 ```
 In a separate terminal, run `roscore`, then return to the original terminal and run
 ```
+cd src/spirit-software/config
+rosparam load project_params.yaml
+cd ~/catkin_ws
 catkin_make run_tests
 ```
 
