@@ -12,6 +12,15 @@ There are two main high-level launch files, one each for the robot and remote co
 - `robot_driver.launch` - should be run on the robot and calls `control.launch` and `estimation.launch`. Has args `proxy`, `mocap`, and `logging`, each of which default to false. Setting any of these to true calls the corresponding launch files. It also passes arg `controller` to `control.launch` (default open_loop)
 - `remote_driver.launch` - should be run on the remote computer and calls `mapping.launch`, `planning.launch`, and `visualization.launch`. Has arg `proxy` (default false) which if true will call `robot_driver.launch` with `proxy:=true` and passing the other args through (`mocap` and `logging`). Also has arg `body_planner` which is passed to `planning.launch`
 
+Common roslaunch calls:
+- `roslaunch spirit_utils robot_driver.launch mocap:=true logging:=true` - Start the robot stack with everything enabled for full data logging and the open_loop_controller
+- `roslaunch spirit_utils robot_driver.launch mocap:=true logging:=true controller:=mpc` - Start the robot stack with everything enabled for full data logging and the mpc_controller
+- `roslaunch spirit_utils remote_driver.launch` Start the remote stack with the default planners and with robot present
+- `roslaunch spirit_utils remote_driver.launch proxy:=true` - Test the full stack with robot absent
+- `roslaunch spirit_utils remote_driver.launch proxy:=true body_planner:=twist` - Test the full stack with robot absent and with simple twist-based high level body plan
+- `roslaunch spirit_utils open_loop_robot_driver.launch` - Only launch open_loop_controller and mblink_converter nodes
+- `roslaunch spirit_utils spirit_gazebo.launch gui:=true` - Launch the Gazebo sim and visualize the results (need to call other launch files to get it to run our software).
+
 ### Nodes and Topics
 
 As of 2-23-2021, the following graph should be launched with `roslaunch spirit_utils remote_driver.launch proxy:=true controller:=mpc`
