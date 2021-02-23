@@ -16,7 +16,7 @@ There are two main high-level launch files, one each for the robot and remote co
 
 As of 2-23-2021, the following graph should be launch with `roslaunch spirit_utils remote_driver.launch proxy:=true controller:=mpc`
 
-![Node and Topic Structure](https://cmu.app.box.com/file/779256719888)
+[Node and Topic Structure](https://cmu.app.box.com/file/779256719888)
 
 
 ### Topics
