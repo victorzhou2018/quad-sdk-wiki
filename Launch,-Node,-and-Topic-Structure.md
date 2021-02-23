@@ -12,7 +12,11 @@ There are two main high-level launch files, one each for the robot and remote co
 - `robot_driver.launch` - should be run on the robot and calls `control.launch` and `estimation.launch`. Has args `proxy`, `mocap`, and `logging`, each of which default to false. Setting any of these to true calls the corresponding launchfiles. It also passes arg `controller` to `control.launch` (default open_loop)
 - `remote_driver.launch` - should be run on the remote computer and calls `mapping.launch`, `planning.launch`, and `visualization.launch`. Has arg `proxy` (default false) which if true will call `robot_driver.launch` with `proxy:=true` and passing the other args through (`mocap` and `logging`). Also has arg `body_planner` which is passed to `planning.launch`
 
-### Nodes
+### Nodes and Topics
+
+As of 2-23-2021, the following graph should be launch with `roslaunch spirit_utils remote_driver.launch proxy:=true controller:=mpc`
+
+![Node and Topic Structure](https://cmu.app.box.com/file/779256719888)
 
 
 ### Topics
