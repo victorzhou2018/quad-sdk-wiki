@@ -24,5 +24,5 @@ roslaunch spirit_utils robot_driver.launch
 source ~/catkin_ws/src/spirit-software/spirit_utils/scripts/init_remote.sh
 roslaunch spirit_utils remote_driver.launch
 ```
-- Optional arguments include `with_proxy:=true` which will launch robot_driver.launch with a proxy node replicating the robot (default false)
+- Optional arguments include `proxy:=true` which will launch robot_driver.launch with a proxy node replicating the robot (default false)
 - Press `Ctrl-C` to stop the run
