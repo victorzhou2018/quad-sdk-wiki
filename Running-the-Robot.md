@@ -9,10 +9,7 @@ ssh ghost@192.168.168.105
 source ~/catkin_ws/src/spirit-software/spirit_utils/scripts/init_robot.sh
 roslaunch spirit_utils robot_driver.launch
 ```
-- Optional arguments to `robot_driver.launch` are
-  - `proxy:=true` launches a node to replicate the robot hardware, use if you are not near the robot (default false)
-  - `mocap:=true` includes `mocap.launch`, which launches the optitrack interface node (default false)
-  - `logging:=true` includes `logging.launch` which starts recording all topics into a bag (default false)
+- Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments
 - (Optional) If you need internet connectivity, plug in an ethernet cable
 
 ### Running experiments
@@ -24,5 +21,5 @@ roslaunch spirit_utils robot_driver.launch
 source ~/catkin_ws/src/spirit-software/spirit_utils/scripts/init_remote.sh
 roslaunch spirit_utils remote_driver.launch
 ```
-- Optional arguments include `proxy:=true` which will launch robot_driver.launch with a proxy node replicating the robot (default false)
+- Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments
 - Press `Ctrl-C` to stop the run
