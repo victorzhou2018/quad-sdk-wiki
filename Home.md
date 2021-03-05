@@ -16,10 +16,11 @@ chmod +x setup.sh && ./setup.sh
 cd ~/catkin_ws
 catkin_make
 ```
-In a separate terminal, run `roscore`, then return to the original terminal and run
+
+### Run tests
+Always do this before pushing to any branch to confirm that tests will pass.
 ```bash
-cd src/spirit-software/config
-rosparam load project_params.yaml
+roslaunch spirit_utils load_params.launch
 cd ~/catkin_ws
 catkin_make run_tests
 ```
