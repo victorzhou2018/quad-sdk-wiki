@@ -1,3 +1,5 @@
+Refer to [The Ghost Robotics Quickstart Guide](https://cmu.app.box.com/file/782269653421) for more information.
+
 ### Initializing the Robot
 - Connect the battery to the terminal and fasten it down with the velcro
 - (Optional) If the correct joint positions matter, arrange the legs in the neutral position
