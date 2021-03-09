@@ -9,3 +9,4 @@ Optional arguments:
 | ------------- | ------------- | ----------- |
 | gui           | false         | Loads gazebo gui |
 | paused        | true          | Start gazebo in paused state |
+| robot_driver  | true          | Launch robot_driver.launch |
