@@ -11,7 +11,7 @@ Launch files are divided across system functionality:
 There are four main high-level launch files, one each for the robot and remote computers, one for gazebo, and one to execute plans:
 - `robot_driver.launch` - should be run on the robot and calls `control.launch` and `estimation.launch`. Has args `proxy`, `mocap`, and `logging`, each of which default to false. Setting any of these to true calls the corresponding launch files. It also passes arg `controller` to `control.launch` (default inverse_dynamics)
 - `remote_driver.launch` - should be run on the remote computer and calls `mapping.launch` and `visualization.launch`, as well as mblink_converter. Has arg `proxy` (default false) which if true will call `robot_driver.launch` with `proxy:=true` and passing the other args through (`mocap` and `logging`)
-- `spirit_gazebo.launch - see the [https://github.com/robomechanics/spirit-software/wiki/Gazebo-Simulator](Gazebo Simulator) page for details.
+- `spirit_gazebo.launch` - see the [https://github.com/robomechanics/spirit-software/wiki/Gazebo-Simulator](Gazebo Simulator) page for details.
 - `execute_plan.launch` - Calls 'planning.launch' and 'logging.launch'
 
 Common roslaunch calls:
