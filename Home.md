@@ -4,6 +4,7 @@
 
 1. Install Ubuntu 18.04 (dual boot or VM) ([help](https://linuxhint.com/install_ubuntu_18-04_virtualbox/))
 2. Install ROS Melodic ([help](http://wiki.ros.org/melodic/Installation/Ubuntu))
+(Optional) Get HSL solver for IPOPT ([help](http://hsl.rl.ac.uk/ipopt))
 3. Create catkin workspace ([help](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment))
 4. Setup repo
 ```bash
@@ -12,6 +13,7 @@ source devel/setup.bash
 cd src
 git clone https://github.com/robomechanics/spirit-software.git
 cd spirit-software
+(optional) cp -r /path/to/HSL /external/ipopt/coinhsl
 chmod +x setup.sh && ./setup.sh
 cd ~/catkin_ws
 catkin_make
