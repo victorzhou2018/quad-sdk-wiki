@@ -21,3 +21,19 @@ In MATLAB, open the `processLog.m` script and set the following variables:
 You can also run matlab without the desktop GUI (`matlab -nodesktop`), and call `processLog(<trial_name_year-month-day>)` from the command window. This will automatically animate and save the data.
 
 The folder created from `bSave = true` will be ignored by git, but can be uploaded directly to Box [here](https://cmu.app.box.com/folder/124893804526).
+
+### Replay bag file in Rviz
+
+Record 
+```
+state/ground_truth
+/localplan
+```
+
+Run
+```
+roslaunch spirit_utils visualization.launch
+rosbag play --clock -r 0.5 xyz.bag
+```
+
+Use the "Reset" button in Rviz to flash and rerun a new bag.
