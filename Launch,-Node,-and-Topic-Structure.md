@@ -17,10 +17,9 @@ There are four main high-level launch files, one each for the robot and remote c
 ### Common roslaunch calls:
 Launch the simulator, visualize in RViz, stand the robot up, then execute a plan while logging:
 ```
-roslaunch spirit_utils spirit_gazebo.launch paused:=false
-roslaunch spirit_utils remote_driver.launch
+roslaunch spirit_utils spirit_gazebo.launch
 rostopic pub /control/mode std_msgs/UInt8 "data: 1"
-roslaunch spirit_utils execute_plan.launch logging:=true
+roslaunch spirit_utils planning.launch global_planner:=twist mpc_type:=nonlinear logging:=true
 ```
 Test the full stack without simulating or logging:
 ```
