@@ -4,7 +4,7 @@
 
 1. Install Ubuntu 18.04 (dual boot or VM) ([help](https://linuxhint.com/install_ubuntu_18-04_virtualbox/))
 2. Install ROS Melodic ([help](http://wiki.ros.org/melodic/Installation/Ubuntu))
-3. (Required) Get HSL solver for IPOPT ([help](http://hsl.rl.ac.uk/ipopt))
+3. (Required for Local Planner) Get HSL solver for IPOPT ([help](http://hsl.rl.ac.uk/ipopt))
 4. Create catkin workspace ([help](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment))
 5. Setup repo
 ```bash
