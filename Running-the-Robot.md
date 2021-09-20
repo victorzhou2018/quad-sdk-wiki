@@ -26,5 +26,5 @@ roslaunch spirit_utils remote_driver.launch
 - Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments
 - Press `Ctrl-C` to stop the run
 
-### To run the default firmware
+### Running the default firmware
 Coming soon...
