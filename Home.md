@@ -13,7 +13,7 @@ source devel/setup.bash
 cd src
 git clone https://github.com/robomechanics/spirit-software.git
 cd spirit-software
-(optional) cp -r /path/to/HSL /external/ipopt/coinhsl
+(required) cp -r /path/to/HSL /external/ipopt/coinhsl
 chmod +x setup.sh && ./setup.sh
 cd ~/catkin_ws
 catkin_make
