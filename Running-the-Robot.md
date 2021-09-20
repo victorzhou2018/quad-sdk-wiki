@@ -8,8 +8,7 @@ Refer to [The Ghost Robotics Quickstart Guide](https://cmu.app.box.com/file/7822
 - Run 
 ```
 ssh ghost@192.168.168.105
-source ~/catkin_ws/src/spirit-software/spirit_utils/scripts/init_robot.sh
-roslaunch spirit_utils robot_driver.launch
+source launch_robot_env.sh
 ```
 - Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments
 - (Optional) If you need internet connectivity, plug in an ethernet cable
