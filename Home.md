@@ -39,7 +39,9 @@ git push --set-upstream origin descriptive-branch-name
 cd ~/catkin_ws/src/spirit-software
 catkin_create_pkg spirit_package_name roscpp std_msgs *other-rosdeps-here*
 ```
-After creating a package, open package.xml and modify the package owner and contact info to be yourself
+After creating a package, open package.xml and modify the package owner and contact info to be yourself.
+
+You can also copy and existing package and edit its contents, just be sure to update the contents fully (including the package.xml and CMake Lists.txt).
 
 ### Create documentation
 ```bash
