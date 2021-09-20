@@ -1,4 +1,4 @@
-Refer to [The Ghost Robotics Quickstart Guide](https://cmu.app.box.com/file/782269653421) for more information.
+Refer to [The Ghost Robotics Quickstart Guide](https://cmu.app.box.com/file/782269653421) for more detailed information on how to run the robot with the default firmware.
 
 ### Initializing the Robot
 - Connect the battery to the terminal and fasten it down with the velcro
