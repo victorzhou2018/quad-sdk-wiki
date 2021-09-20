@@ -15,7 +15,7 @@ There are four main high-level launch files, one each for the robot and remote c
 - `execute_plan.launch` - Calls `planning.launch` with arg `body_planner` (default global), and `logging.launch` if `logging:=true` (default false)
 
 ### Common roslaunch calls:
-Launch the simulator, visualize in RViz, stand the robot up, then execute a plan while logging:
+Launch the simulator with RViz visualization, stand the robot up, then execute a plan while logging:
 ```
 roslaunch spirit_utils spirit_gazebo.launch
 rostopic pub /control/mode std_msgs/UInt8 "data: 1"
