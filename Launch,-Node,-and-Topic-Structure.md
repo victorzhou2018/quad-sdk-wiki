@@ -36,6 +36,6 @@ Other calls:
 
 ### Nodes and Topics
 
-As of 2-23-2021, the following graph should be launched with `roslaunch spirit_utils remote_driver.launch proxy:=true controller:=mpc`
+The following image demonstrates key components of the software architecture and on which hardware they run:
 
-[Node and Topic Structure](https://cmu.app.box.com/file/779256719888)
+[Node and Topic Structure](https://cmu.app.box.com/file/861382302310)
