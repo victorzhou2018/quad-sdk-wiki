@@ -5,22 +5,23 @@ Refer to [The Ghost Robotics Quickstart Guide](https://cmu.app.box.com/file/7822
 - (Optional) If the correct joint positions matter, arrange the legs in the neutral position
 - Flip the on switch
 - From the remote computer, wait until the wireless network "Spirit40-006" appears, then connect to it
-- Run 
+- Connect to the robot with (pwd ghost):
 ```
 ssh ghost@192.168.168.105
+```
+- Run the robot driver with the inverse dynamics controller (and optionally download/build code as desired if the robot is connected to CMU-DEVICE via ethernet cable):
+```
 source launch_robot_env.sh
 ```
-- Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments
-- (Optional) If you need internet connectivity, plug in an ethernet cable
+- Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments to robot_driver if preferred over the bash script.
 
-### Running experiments
+### Initializing the remote computer
 - Before starting, make sure:
   - You are connected to the robot's wifi and have set a manual static IP of 192.168.168.5
   - `~/catkin_ws/src/spirit-software` is a valid path (if not, just manually source whichever workspace you use)
-- To run the planning stack and visualize, open a new terminal and run 
+- To run the source the environment, launch the visualization stack, and establish a heartbeat connection, open a new terminal and run the following (and optionally download/build new code, also declining to launch the remote driver will still set up your environment correctly)
 ```
-source ~/catkin_ws/src/spirit-software/spirit_utils/scripts/init_remote.sh
-roslaunch spirit_utils remote_driver.launch
+source launch_remote_env.sh
 ```
-- Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments
+- Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for optional arguments to remote_driver if preferred over the bash script.
 - Press `Ctrl-C` to stop the run
