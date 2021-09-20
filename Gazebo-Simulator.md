@@ -4,7 +4,8 @@
 To launch the Gazebo simulator, run:
 ```roslaunch spirit_utils spirit_gazebo.launch arg:=value```
 
-For quick testing, launch with body_planner:=twist and use the twist keyboard controller to manipulate the robot. Pressing number keys corresponds to switching to that control mode (i.e. press 0 to sit, 1 to stand) and use arrow keys to send desired twists to the local planner.
+- Refer to [Launch, Node and Topic Structure](https://github.com/robomechanics/spirit-software/wiki/Launch,-Node,-and-Topic-Structure) for roslaunch commands to run code on the robot. For example, stand up and track twist trajectories with:
+
 
 Optional arguments:
 | Arg Name      | Default Value | Description |
