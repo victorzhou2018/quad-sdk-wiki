@@ -1,7 +1,7 @@
 ### Launch Files
 Launch files are divided across system functionality:
 - `mapping.launch` - launches nodes terrain_map_publisher and grid_map_visualization
-- `planning.launch` - launches nodes body planner, local_footstep_planner, and mpc_controller. Takes arg `body_planner` with values of `global` (default) or `twist`, and arg `mpc` (default true).
+- `planning.launch` - launches nodes global_body_planner and local_planner. Takes arg `global_planner` with values of `fgmp` (default) or `twist`, arg `local_planner` with values of `full` (default) and `body`, and arg `mpc_type` of value `nonlinear` (default) or `convex`.
 - `control.launch` - launches node inverse_dynamics or open_loop_controller. Takes arg `controller` with values of `inverse_dynamics` (default) or `open_loop`
 - `estimation.launch` - launches nodes ekf_estimator, contact_detection, and body_force_estimation
 - `mocap.launch` - launches node mocap_node with config file and ground_truth_publisher
