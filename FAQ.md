@@ -10,3 +10,6 @@ Confusingly, Ghost Robotics does NOT use this definition, and instead has their 
 ERROR: Unable to communicate with master!
 ```
 No ROS master detected - if on the remote computer make sure to source launch_robot_env.sh (which sources the appropriate setup.bash). Otherwise you probably haven't issues and roslaunch commands yet.
+
+## Can't SSH into Jetson TX2
+Power cycle the USB ethernet adapter by turn on&off the USB hub port.
