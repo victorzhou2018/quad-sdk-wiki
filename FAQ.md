@@ -6,10 +6,15 @@ The joint arrays in spirit_msgs::RobotState are defined such that indices 0 = ab
 Confusingly, Ghost Robotics does NOT use this definition, and instead has their urdf and /mcu/state/jointURDF use the following ordering: 0 = hip0, 1 = knee0, 2 = hip1, 3 = knee1, 4 = hip2, 5 = knee2, 6 = hip3, 7 = knee3, 8 = abd0, 9 = abd1, 10 = abd2, 11 = abd3. To correct this, our `ground_truth_publisher.cpp` reads their message and maps from their ordering to ours, see the `joints_order_` vector in the [source code](https://github.com/robomechanics/spirit-software/blob/109168feb808f844947affadb95e71cc271dc47d/spirit_utils/src/ground_truth_publisher.cpp#L32) . Likewise our `estimator_plugin.cpp` maps from the alphabetical order in Gazebo to our order.
 
 ## Common errors
+
+### Unable to communicate with master
 ```
 ERROR: Unable to communicate with master!
 ```
 No ROS master detected - if on the remote computer make sure to source launch_robot_env.sh (which sources the appropriate setup.bash). Otherwise you probably haven't issues and roslaunch commands yet.
 
-## Can't SSH into Jetson TX2
+### Can't SSH into Jetson TX2
 Power cycle the USB ethernet adapter by turn on&off the USB hub port.
+
+### Internal compiler error (during catkin_make)
+This typically happens when your system runs out of RAM while compiling. Try `catkin_make -j4 -l4', or go even lower than 4 (this represents the number of parallel threads used while compiling). Alternatively if you were running `catkin_make run_tests`, try compiling just the source code first, then the tests after completion.
