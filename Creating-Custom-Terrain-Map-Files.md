@@ -6,7 +6,8 @@ The current procedure to generate terrain maps compatible with both Gazebo (whic
    - Output as: Binary
    - Units: Meters
    - Resolution: Custom, Define Maximum facet size: 0.20m
-4. Save the part as a .stl with default settings
+4. Save the part as a .ply with the same settings above
 5. Put all three files (.sldprt, .ply, .stl) in a folder with the same name as the part
 6. Upload that part to [Box](https://cmu.app.box.com/folder/140471289581)
 7. Put a copy of the folder in spirit-software/spirit_simulation/gazebo_scripts/worlds
+8. Make sure the initial states of the robot in spirit_gazebo.launch are within the feasible region of the terrain.
