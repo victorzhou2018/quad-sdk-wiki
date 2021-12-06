@@ -1,1 +1,1 @@
-Welcome to the spirit-software wiki!
+Welcome to the quad-software wiki!
