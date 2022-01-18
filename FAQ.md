@@ -20,4 +20,4 @@ Power cycle the USB ethernet adapter by turn on&off the USB hub port.
 This typically happens when your system runs out of RAM while compiling. Try `catkin build -j4 -l4', or go even lower than 4 (this represents the number of parallel threads used while compiling). Alternatively if you were running `catkin_make run_tests`, try compiling just the source code first, then the tests after completion.
 
 ### RViz crashes when using Clicked Point
-This appears to be a [known issue](https://github.com/ros-visualization/rviz/issues/1082) when using interactive markers with NVidia drivers. It can be fixed by rebuilding OGRE with an updated version (and then also RViz), but most likely we will eliminate the use of interactive markers for this reason.
+This appears to be a [known issue](https://github.com/ros-visualization/rviz/issues/1082) when using interactive markers with NVidia drivers. It can be fixed by rebuilding OGRE with an updated version (and then also RViz) or reverting to Nouveau drivers, but most likely we will eliminate the use of interactive markers for this reason.
