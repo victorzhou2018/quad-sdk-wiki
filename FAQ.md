@@ -21,3 +21,6 @@ This typically happens when your system runs out of RAM while compiling. Try `ca
 
 ### RViz crashes when using Clicked Point
 This appears to be a [known issue](https://github.com/ros-visualization/rviz/issues/1082) when using interactive markers with NVidia drivers. It can be fixed by rebuilding OGRE with an updated version (and then also RViz) or reverting to Nouveau drivers, but most likely we will eliminate the use of interactive markers for this reason.
+
+### Catkin: command not found (or any other packages)
+The setup.sh script should install all the required dependencies, if not then likely sudo apt update failed. Check your packages.
