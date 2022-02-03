@@ -19,6 +19,8 @@ Power cycle the USB ethernet adapter by turn on&off the USB hub port.
 ### Internal compiler error (during catkin_make)
 This typically happens when your system runs out of RAM while compiling. Try `catkin build -j4 -l4', or go even lower than 4 (this represents the number of parallel threads used while compiling). Alternatively if you were running `catkin_make run_tests`, try compiling just the source code first, then the tests after completion.
 
+This could also be caused by other processes running in the background which may or not be ROS related. Sometimes nodes or tests that do not get terminated properly can consume significant resources in the background. Check to make sure you don't have something eating up your CPU overhead.
+
 ### RViz crashes when using Clicked Point
 This appears to be a [known issue](https://github.com/ros-visualization/rviz/issues/1082) when using interactive markers with NVidia drivers. It can be fixed by rebuilding OGRE with an updated version (and then also RViz) or reverting to Nouveau drivers, but most likely we will eliminate the use of interactive markers for this reason.
 
