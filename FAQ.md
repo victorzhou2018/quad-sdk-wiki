@@ -5,7 +5,7 @@ The joint arrays in spirit_msgs::RobotState are defined such that indices 0 = ab
 
 Confusingly, Ghost Robotics does NOT use this definition, and instead has their urdf and /mcu/state/jointURDF use the following ordering: 0 = hip0, 1 = knee0, 2 = hip1, 3 = knee1, 4 = hip2, 5 = knee2, 6 = hip3, 7 = knee3, 8 = abd0, 9 = abd1, 10 = abd2, 11 = abd3. To correct this, our `ground_truth_publisher.cpp` reads their message and maps from their ordering to ours, see the `joints_order_` vector in the [source code](https://github.com/robomechanics/spirit-software/blob/109168feb808f844947affadb95e71cc271dc47d/spirit_utils/src/ground_truth_publisher.cpp#L32) . Likewise our `estimator_plugin.cpp` maps from the alphabetical order in Gazebo to our order.
 
-## Common errors
+# Common errors
 
 ### Unable to communicate with master
 ```
