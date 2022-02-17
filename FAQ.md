@@ -5,6 +5,14 @@ The joint arrays in spirit_msgs::RobotState are defined such that indices 0 = ab
 
 Confusingly, Ghost Robotics does NOT use this definition, and instead has their urdf and /mcu/state/jointURDF use the following ordering: 0 = hip0, 1 = knee0, 2 = hip1, 3 = knee1, 4 = hip2, 5 = knee2, 6 = hip3, 7 = knee3, 8 = abd0, 9 = abd1, 10 = abd2, 11 = abd3. To correct this, our `ground_truth_publisher.cpp` reads their message and maps from their ordering to ours, see the `joints_order_` vector in the [source code](https://github.com/robomechanics/spirit-software/blob/109168feb808f844947affadb95e71cc271dc47d/spirit_utils/src/ground_truth_publisher.cpp#L32) . Likewise our `estimator_plugin.cpp` maps from the alphabetical order in Gazebo to our order.
 
+## I can't see the robot on the phone app
+The phone app requires the Ghost ROS service to be up and running. You can check if the service is active with
+```
+ssh ghost@<ghost-IP>
+sudo service ghost status
+```
+If the service has failed this should reveal the source. Often this is because the IP address is invalid - in particular the ROS_IP and ROS_MASTER_URI parameters set in `~/.environment_vars.sh` must be valid IPs. If they are set to the RML router IP (192.168.8.101) but that router is not connected, the service will fail. If operation without the RML router is desired, change the ROS_IP and ROS_MASTER_URI back to the GR default (192.168.168.105) and enter `sudo service ghost restart`.
+
 # Common errors
 
 ### Unable to communicate with master
