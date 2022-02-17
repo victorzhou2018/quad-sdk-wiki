@@ -16,8 +16,8 @@ No ROS master detected - if on the remote computer make sure to source launch_ro
 ### Can't SSH into Jetson TX2
 Power cycle the USB ethernet adapter by turn on&off the USB hub port.
 
-### Internal compiler error (during catkin_make)
-This typically happens when your system runs out of RAM while compiling. Try `catkin build -j4 -l4`, or go even lower than 4 (this represents the number of parallel threads used while compiling). Alternatively if you were running `catkin_make run_tests`, try compiling just the source code first, then the tests after completion.
+### Internal compiler error (during catkin build)
+This typically happens when your system runs out of RAM while compiling. Try `catkin build -j4 -l4`, go even lower than 4 (this represents the number of parallel threads used while compiling), or try `catkin build --this` in the package you want to build to avoid compiling the whole workspace. Alternatively if you were running `catkin test`, try compiling just the source code first, then the tests after completion.
 
 This could also be caused by other processes running in the background which may or not be ROS related. Sometimes nodes or tests that do not get terminated properly can consume significant resources in the background. Check to make sure you don't have something eating up your CPU overhead.
 
