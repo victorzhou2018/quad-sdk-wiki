@@ -34,3 +34,8 @@ This appears to be a [known issue](https://github.com/ros-visualization/rviz/iss
 
 ### Catkin: command not found (or any other packages)
 The setup.sh script should install all the required dependencies, if not then likely sudo apt update failed. Check your packages.
+
+### Gazebo crashes on launch
+If this is your first time running the simulator, check that gazebo can launch properly. Running `gazebo` in the command line should bring up the gazebo GUI. If you get a symbol lookup error, update your ignition math library (as described [here](https://answers.gazebosim.org//question/22071/symbol-lookup-error-both-instalation-methods/)).
+
+Note that Gazebo can be fickle and sometimes will crash due to no clear reason. Try launching again, or checking that there are no background gazebo instances already running.
