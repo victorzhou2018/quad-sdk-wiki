@@ -1,6 +1,6 @@
 The current procedure to generate terrain maps compatible with both Gazebo (which needs a .stl) and the GridMap package (which needs a .ply) is as follows:
 
-1. Create the terrain map as a part in Solidworks
+1. Create the terrain map as a part in CAD software such as Solidworks
 2. Save the part file
 3. Save the part as a .stl with the following custom settings:
    - Output as: Binary
