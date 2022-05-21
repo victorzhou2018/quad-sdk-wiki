@@ -38,4 +38,4 @@ The setup.sh script should install all the required dependencies, if not then li
 ### Gazebo crashes on launch
 If this is your first time running the simulator, check that gazebo can launch properly. Running `gazebo` in the command line should bring up the gazebo GUI. If you get a symbol lookup error, update your ignition math library (as described [here](https://answers.gazebosim.org//question/22071/symbol-lookup-error-both-instalation-methods/)).
 
-Note that Gazebo can be fickle and sometimes will crash due to no clear reason. Try launching again, or checking that there are no background gazebo instances already running.
+Note that Gazebo can be fickle and sometimes will crash due to no clear reason. Try launching again, or checking that there are no background gazebo instances already running (and kill them with `killall -9 gzserver`).
