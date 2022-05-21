@@ -1,3 +1,5 @@
+This document is for internal RML infrastructure, and is not relevant for external users.
+
 Refer to [The Ghost Robotics Quickstart Guide](https://cmu.app.box.com/file/782269653421) for more detailed information on how to run the robot with the default firmware and how to handle the physical components of the robot.
 
 ### Initializing the Robot
