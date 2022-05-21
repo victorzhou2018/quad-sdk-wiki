@@ -1,3 +1,5 @@
+This document is for internal RML infrastructure, and is not relevant for external users.
+
 1. Make sure all force plate amplifiers and cameras are on (Indicated by the lights on the amplifier and the blue rings around each camera). 
 2. Launch Motive
 2. Do camera calibration or load an existing calibration file.
