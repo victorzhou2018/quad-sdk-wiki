@@ -37,7 +37,7 @@ roslaunch quad_utils visualization.launch
 roslaunch quad_utils control.launch controller:=<your-controller-arg>
 ```
 
-### Execute your controller (on the Spirit 40)
+### Execute the controller (on the Spirit 40)
 7. Get your code downloaded onto the TX2.
    - Commit your code to your branch <your-branch-name> and push to GitHub
    - Follow the [instructions](https://github.com/robomechanics/quad-software/wiki/2.-Running-the-Robot) to power the robot on
