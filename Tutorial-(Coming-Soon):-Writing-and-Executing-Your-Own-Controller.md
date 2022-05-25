@@ -1,3 +1,5 @@
+Note: This tutorial was for an RML-internal project and has since been deprecated. Users can now generate new controllers by inheriting the `LegController` abstract class (see existing examples in `robot_driver/src/controllers`). A tutorial describing these steps will be coming soon.
+
 To write your own controller and execute it on the robot, follow these steps:
 
 1. Write your source code for your controller class and wrapper node (these instructions will assume you have some files named `controller.cpp` and `controller_node.cpp` in the `example_package` package). You can copy `open_loop_controller.cpp` as an example.
