@@ -1,4 +1,6 @@
-Note: This tutorial was for an RML-internal project and has since been deprecated. Users can now generate new controllers by inheriting the `LegController` abstract class (see existing examples in `robot_driver/src/controllers`). A tutorial describing these steps will be coming soon.
+**Note: This tutorial was for an RML-internal project and has since been deprecated**. Users can now generate new controllers by inheriting the `LegController` abstract class (see existing examples in `robot_driver/src/controllers`). A tutorial describing these steps will be coming soon.
+
+### Writing a new controller
 
 To write your own controller and execute it on the robot, follow these steps:
 
@@ -20,6 +22,8 @@ target_link_libraries(controller_test example_package ${catkin_LIBRARIES})
 (In original terminal) cd catkin_ws
 catkin_make run_tests
 ```
+
+### Test the controller
 5. Modify `quad_utils/launch/control.launch` by adding the following to include an argument for your new controller:
 ```
 <group if="$(eval arg('controller') == '<your-controller-arg>')">
@@ -32,6 +36,8 @@ roslaunch quad_utils quad_gazebo.launch software:=false
 roslaunch quad_utils visualization.launch
 roslaunch quad_utils control.launch controller:=<your-controller-arg>
 ```
+
+### Execute your controller (on the Spirit 40)
 7. Get your code downloaded onto the TX2.
    - Commit your code to your branch <your-branch-name> and push to GitHub
    - Follow the [instructions](https://github.com/robomechanics/quad-software/wiki/2.-Running-the-Robot) to power the robot on
