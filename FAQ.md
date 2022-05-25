@@ -2,6 +2,11 @@
 
 Some of these FAQ will be specific to RML infrastrucure but we will list everything here for clarity. Visit the [Issue Tracker](https://github.com/robomechanics/quad-sdk/issues) for software-related issues.
 
+## Does Quad-SDK work for other legged morphologies (bipeds, hexapods, etc)?
+As implied by the name, Quad-SDK is designed to make autonomous, agile locomotion attainable for quadrupedal platforms. However, many of the algorithms implemented here could be extended to other morphologies without major structural changes. For example, the Global Planner abstracts the legs away from the problem, and the Local Planner and Robot Driver for the most part only require information about the kinematics and dynamics which could be represented with any number of end-effectors.
+
+However, there seems to be a growing class of quadrupeds that are readily available on the market which share similar features (quasi-direct drive, lightweight 3DOF legs) and are well poised to do real work in research and industry. In an effort to provide useful, tested software without excessive overhead caused by many abstraction layers, we restrict our focus to this class of platform. That said, we invite the community to extend the software as desired and look forward to seeing applications to more varied morphologies.
+
 ## What is the convention for joint and leg numbering in the RobotState message?
 The joint arrays in spirit_msgs::RobotState are defined such that indices 0 = abad0, 1 = hip0, 2 = knee1, 3 = abad1, 4 = hip1, 5 = knee12, 6 = abad2, 7 = hip2, 8 = knee2, 9 = abad3, 10 = hip3, 11 = knee3. Legs are numbered such that 0 = front left, 1 = back left, 2  = front right, and 3 = back right. So calling `state_msg.joints.positions[4]` would give you the joint position of the back left hip motor.
 
