@@ -4,7 +4,7 @@ Users can now generate new controllers by inheriting the `LegController` abstrac
 
 To write your own controller and execute it on the robot, follow these steps:
 
-1. Write your source code for your controller class in the `robot_driver/sr/controllers` and `robot_driver/include/robot_driver` folders (these instructions will assume you have created a `controller` class in `controller.cpp` with header file `controller.h`). You can copy `joint_controller.cpp` as an example.
+1. Write your source code for your controller class in the `robot_driver/sr/controllers` and `robot_driver/include/robot_driver` folders (these instructions will assume you have created a `controller` class in `controller.cpp` with header file `controller.h`). You can look at `joint_controller.cpp` as an example. You will need to implement a `computeLegCommandArray` method specified in `robot_driver/include/robot_driver/leg_controller.h` that populates a `LegCommandArray` with the desired commands to the legs.
 2. Update the `CMakeLists.txt` of robot_driver to include your source code in the project library (you can look for where `joint_controller.cpp` appears):
 ```
 add_library(robot_driver src/controller.cpp)
