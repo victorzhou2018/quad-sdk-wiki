@@ -16,9 +16,9 @@ target_link_libraries(controller_test example_package ${catkin_LIBRARIES})
 ```
 4. Build your code and run the tests:
 ```
-(In separate terminal) roslaunch quad_utils load_params.launch
-(In original terminal) cd catkin_ws
-catkin_make run_tests
+(In separate terminal) roslaunch quad_utils load_global_params.launch load_robot_params:=true
+(In original terminal) cd ~/catkin_ws
+catkin run_tests
 ```
 5. Integrate your controller into robot_driver:
 Include your controller in `robot_driver/include/robot_driver/robot_driver.h`:
