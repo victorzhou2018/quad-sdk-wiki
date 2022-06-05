@@ -7,7 +7,7 @@ As implied by the name, Quad-SDK is designed to make autonomous, agile locomotio
 
 However, there seems to be a growing class of quadrupeds that are readily available on the market which share similar features (quasi-direct drive, lightweight 3-DOF legs) and are well poised to do real work in research and industry. In an effort to provide useful, tested software without excessive overhead caused by many abstraction layers, we restrict our focus to this class of platform. That said, we invite the community to extend the software as desired and look forward to seeing applications to more varied morphologies.
 
-## Will you offer ___ feature?
+## Will Quad-SDK offer ___ feature?
 
 Our goal is for Quad-SDK to provide a common platform for researchers to deploy agile autonomy to their quadrupeds, and we've worked hard to make this as seamless as possible. However, the repository is primarily maintained by the members of the Robomechanics Lab - we are researchers with our own projects and hypotheses to evaluate! This means that we may not be able to get to each new feature request, but we again invite the community to contribute functionality that would be useful to all.
 
