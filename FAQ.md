@@ -40,7 +40,7 @@ Note that Gazebo can be fickle and sometimes will crash due to no clear reason. 
 
 ## RML-specific questions
 
-## I can't see the robot on the phone app
+### I can't see the robot on the phone app
 The phone app requires the Ghost ROS service to be up and running. You can check if the service is active with
 ```
 ssh ghost@<ghost-IP>
