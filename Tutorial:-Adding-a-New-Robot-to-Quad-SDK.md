@@ -2,9 +2,11 @@ Users can add a new robot to Quad-SDK by adding a number of files describing the
 
 In the `/quad_simulator` package, modify the following: 
 
-- Add a `/quad_simulator/gazebo_scripts/config/<robot_name>_control.yaml` file, this file sets joint controllers and contact publishing rates. 
-
-- Add a `/quad_simulator/<robot_name>_description` folder containing: materials, meshes, sdf, urdf
+- Add a `/quad_simulator/<robot_name>_description` folder containing: materials, meshes, sdf, urdf. The Name of joints should be same as what stated in the Spirit and A1 urdf. We recommend to modify xacro files and generate the sdf andd urdf through
+```
+rosrun xacro xacro --inorder -o urdf/new_robot_type.urdf xacro/robot.xacro DEBUG:=false
+gz sdf -p urdf/new_robot_type.urdf > sdf_mesh/new_robot_type.sdf
+```
 
 In the `/quad_utils` package, modify the following:
 
