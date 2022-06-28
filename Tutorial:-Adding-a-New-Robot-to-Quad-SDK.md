@@ -5,7 +5,7 @@ In the `/quad_simulator` package, modify the following:
 - Add a `/quad_simulator/<robot_name>_description` folder which should contain sdf, urdf. The Name of joints should be same as what stated in the Spirit and A1 urdf in the order of:
 
 - **`body`**
-- **`hip0`**
+- **`hip0` - 8 - `upper0` - **
 
 We recommend to modify xacro files and generate the sdf andd urdf through
 ```
