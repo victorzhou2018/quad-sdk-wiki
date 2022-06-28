@@ -10,7 +10,7 @@ In the `/quad_simulator` package, modify the following:
 - **``10``** - **`hip2`** - **``4``** - **`upper2`** - **``5``** - **`lower2`** - **``jtoe2``** - **`toe2`** 
 - **``11``** - **`hip3`** - **``6``** - **`upper3`** - **``7``** - **`lower3`** - **``jtoe3``** - **`toe3`** 
 
-where the leg sequence is in: front left, rear left, front right and rear right. 
+where `0-11` are actuator joints and ``jtoe0-3` are fixed joint. All others are links. The leg sequence is in: front left, rear left, front right and rear right. 
 
 We recommend to modify xacro files and generate the sdf andd urdf through
 ```
