@@ -2,7 +2,12 @@ Users can add a new robot to Quad-SDK by adding a number of files describing the
 
 In the `/quad_simulator` package, modify the following: 
 
-- Add a `/quad_simulator/<robot_name>_description` folder containing: materials, meshes, sdf, urdf. The Name of joints should be same as what stated in the Spirit and A1 urdf. We recommend to modify xacro files and generate the sdf andd urdf through
+- Add a `/quad_simulator/<robot_name>_description` folder which should contain sdf, urdf. The Name of joints should be same as what stated in the Spirit and A1 urdf in the order of:
+
+- **`body`**
+- **`hip0`**
+
+We recommend to modify xacro files and generate the sdf andd urdf through
 ```
 rosrun xacro xacro --inorder -o urdf/new_robot_type.urdf xacro/robot.xacro DEBUG:=false
 gz sdf -p urdf/new_robot_type.urdf > sdf_mesh/new_robot_type.sdf
