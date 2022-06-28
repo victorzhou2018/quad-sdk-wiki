@@ -5,12 +5,15 @@ In the `/quad_simulator` package, modify the following:
 - Add a `/quad_simulator/<robot_name>_description` folder which should contain sdf, urdf. The Name of joints should be same as what stated in the Spirit and A1 urdf in the order of:
 
 - **`body`**
-- **`hip0`** - 8 - **`upper0`** 
+- **``8``** - **`hip0`** - **``0``** - **`upper0`** - **``1``** - **`lower0`** - **``jtoe0``** - **`toe0`** 
+- **``9``** - **`hip1`** - **``2``** - **`upper1`** - **``3``** - **`lower1`** - **``jtoe1``** - **`toe1`** 
+- **``10``** - **`hip2`** - **``4``** - **`upper2`** - **``5``** - **`lower2`** - **``jtoe2``** - **`toe2`** 
+- **``11``** - **`hip3`** - **``6``** - **`upper3`** - **``7``** - **`lower3`** - **``jtoe3``** - **`toe3`** 
 
 We recommend to modify xacro files and generate the sdf andd urdf through
 ```
-rosrun xacro xacro --inorder -o urdf/new_robot_type.urdf xacro/robot.xacro DEBUG:=false
-gz sdf -p urdf/new_robot_type.urdf > sdf_mesh/new_robot_type.sdf
+rosrun xacro xacro --inorder -o urdf/<robot_name>.urdf xacro/robot.xacro DEBUG:=false
+gz sdf -p urdf/<robot_name>.urdf > sdf_mesh/<robot_name>.sdf
 ```
 
 In the `/quad_utils` package, modify the following:
