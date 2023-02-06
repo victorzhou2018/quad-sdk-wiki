@@ -12,7 +12,7 @@ However, there seems to be a growing class of quadrupeds that are readily availa
 Our goal is for Quad-SDK to provide a common platform for researchers to deploy agile autonomy to their quadrupeds, and we've worked hard to make this as seamless as possible. However, the repository is primarily maintained by the members of the Robomechanics Lab - we are researchers with our own projects and hypotheses to evaluate! This means that we may not be able to get to each new feature request, but we again invite the community to contribute functionality that would be useful to all.
 
 ## What is the convention for joint and leg numbering in the RobotState message?
-The joint arrays in spirit_msgs::RobotState are defined such that indices 0 = abad0, 1 = hip0, 2 = knee1, 3 = abad1, 4 = hip1, 5 = knee12, 6 = abad2, 7 = hip2, 8 = knee2, 9 = abad3, 10 = hip3, 11 = knee3. Legs are numbered such that 0 = front left, 1 = back left, 2  = front right, and 3 = back right. So calling `state_msg.joints.positions[4]` would give you the joint position of the back left hip motor.
+The joint arrays in spirit_msgs::RobotState are defined such that indices 0 = abad0, 1 = hip0, 2 = knee0, 3 = abad1, 4 = hip1, 5 = knee1, 6 = abad2, 7 = hip2, 8 = knee2, 9 = abad3, 10 = hip3, 11 = knee3. Legs are numbered such that 0 = front left, 1 = back left, 2  = front right, and 3 = back right. So calling `state_msg.joints.positions[4]` would give you the joint position of the back left hip motor.
 
 # Common errors
 
