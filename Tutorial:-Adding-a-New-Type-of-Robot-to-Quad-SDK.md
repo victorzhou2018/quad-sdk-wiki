@@ -111,5 +111,5 @@ roslaunch quad_utils quad_plan.launch robot_type:="<robot_name>"
 
 ***
 
-## 7 Tune Parameters
+## 7. Tune Parameters
 If the robot model is not working correctly in simulation, tune the robot's parameters in `/quad_utils/config/<robot_name>.yaml` and the `desired_height` parameter in `/local_planner/local_planner.yaml`
